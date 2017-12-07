@@ -1,0 +1,198 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Hotels in Galway</title> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="themes/jkf.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="jquery.mobile.structure-1.0.1.css" />
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.mobile-1.0.1.min.js"></script>
+
+
+	<script type="text/javascript">	
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","cd3.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML; 
+x=xmlDoc.getElementsByTagName("HOTEL");
+
+function displayHotel(i)
+{
+	console.log(x[i]);
+	console.log(x);
+name=(x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue);
+ADDRESS=(x[i].getElementsByTagName("ADDRESS")[0].childNodes[0].nodeValue);
+price=(x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue);
+description=(x[i].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue);
+image=(x[i].getElementsByTagName("IMAGE")[0].childNodes[0].nodeValue);
+txt="Name "+name+"<br />ADDRESS: "+ADDRESS+"<br />Price: "+price+"<br />Description: "+description+"<br> <br /> <img src = "+image+ " width =200 height = 200 >"  ;
+document.getElementById("showHOTEL").innerHTML=txt;
+console.warn(txt);
+}
+</script>
+</head> 
+
+	
+<body> 
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="one">
+
+	<div data-role="header">
+		<h1>Hotels In Galway</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+		<h2>Welcome to Hotels In Galway</h2>
+		<h3>Your go-to guide for getting the best deals possible!</h3>
+
+		
+	
+		
+		
+		
+		
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+	  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	  <li data-target="#myCarousel" data-slide-to="1"></li>
+	  <li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+  
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner">
+	  <div class="item active">
+		<img src="img/house.png" alt="The House Hotel" style="width:50%;">
+		<div class="carousel-caption"></div>
+
+	  </div>
+  
+	  <div class="item">
+		<img src="img/theg.png" alt="The G Hotel" style="width:45%;">
+		<div class="carousel-caption"></div>
+		
+	  </div>
+	
+  
+	  <div class="item">
+		<img src="img/connacht.png" alt="The Connacht Hotel" style="width:40%;">
+		<div class="carousel-caption"></div>
+	
+		</div>
+
+		<div class="item">
+			<img src="img/jurys.png" alt="Jurys Inn" style="width:40%;">
+			<div class="carousel-caption"></div>
+		
+			</div>
+			<div class="item">
+				<img src="img/clayton.png" alt="The Clayton Hotel" style="width:40%;">
+				<div class="carousel-caption"></div>
+			
+				</div>
+	</div>
+  
+	<!-- Left and right controls -->
+	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+	  <span class="glyphicon glyphicon-chevron-left"></span>
+	  <span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" data-slide="next">
+	  <span class="glyphicon glyphicon-chevron-right"></span>
+	  <span class="sr-only">Next</span>
+	</a>
+  </div>
+
+		<p><a href="#two" data-role="button">Show page "two"</a></p>	
+		<p><a href="#popup"data-role="button" data-rel="dialog" data-transition="pop">Show page FAQ</a></p>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="">
+		<h4>Hotels In Galway 2018</h4>
+	</div><!-- /footer -->
+</div><!-- /page one -->
+
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="two" data-theme="a">
+
+	<div data-role="header">
+		<h1>Hotels In Galway</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		
+		
+		<div id='showHOTEL'>Click on a hotel to display booking information.</div><br />
+
+	<ul data-role="listview" >	
+		<script type="text/javascript">
+
+for (var i=0;i<x.length;i++)
+  { 
+  document.write("<li onclick='displayHotel(" + i + ")'>");
+  document.write("<br>");
+  document.write(x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue);
+  document.write("<br>");
+  document.write(x[i].getElementsByTagName("ADDRESS")[0].childNodes[0].nodeValue);
+ document.write("</li>");
+  }
+
+</script>
+	</ul>	
+
+	<br>
+		
+		
+		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Back to previous page</a></p>	
+		
+	</div><!-- /content -->
+
+	
+	<div data-role="footer">
+		<h4>Hotels In Galway 2018</h4>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+
+<!-- Start of third page: #popup -->
+<div data-role="page" id="popup">
+
+	<div data-role="header" data-theme="e">
+		<h1>Dialog</h1>
+
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">	
+		<h2>Popup</h2>
+		<ul data-role="listview" data-filter="true">	
+
+</ul>
+		
+		
+		<p> <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> </p>		
+		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to page "one"</a></p>	
+	</div><!-- /content -->
+
+	
+	<div data-role="footer">
+		<h4>Hotels In Galway 2018</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+
+</body>
+</html>

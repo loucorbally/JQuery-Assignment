@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CATALOG xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<HOTEL>
+		<NAME>Jurys Inn</NAME>
+		<ADDRESS>Quay St, Galway</ADDRESS>
+		<PRICE>€95.00</PRICE>
+		<DESCRIPTION>Standard Double And Single Room</DESCRIPTION>
+		<IMAGE>img/jurys.png</IMAGE>
+	</HOTEL>
+	<HOTEL>
+		<NAME>G Hotel</NAME>
+		<ADDRESS>Old Dublin Road, Galway</ADDRESS>
+		<PRICE>€170.00</PRICE>
+		<DESCRIPTION>Deluxe King Room</DESCRIPTION>
+		<IMAGE>img/ghotel.png</IMAGE>
+	</HOTEL>
+	<HOTEL>
+		<NAME>The House Hotel</NAME>
+		<ADDRESS> Spanish Parade, Galway</ADDRESS>
+		<PRICE>€109.00</PRICE>
+		<DESCRIPTION>Standard Room</DESCRIPTION>
+		<IMAGE>img/house.png</IMAGE>
+	</HOTEL>
+		<HOTEL>
+		<NAME>The Connacht Hotel</NAME>
+		<ADDRESS> Old Dublin Rd, Galway</ADDRESS>
+		<PRICE>€69.00</PRICE>
+		<DESCRIPTION>Double Room</DESCRIPTION>
+		<IMAGE>img/connacht.png</IMAGE> 
+	</HOTEL>
+		<HOTEL>
+		<NAME>The Clayton Hotel</NAME>
+		<ADDRESS> Old Monivea Rd, Ballybrit, Galway</ADDRESS>
+		<PRICE>€71.00</PRICE>
+		<DESCRIPTION> Standard Double Room</DESCRIPTION>
+		<IMAGE>img/clayton.png</IMAGE>
+	</HOTEL>
+</CATALOG>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CATALOG xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<hotel_list> 
+   <hotel> 
+       <name>Jurys Inn</name>
+		<location>Quay Street, Galway </location>
+       <price>€99.00 per night</price> 
+       <description>Room only with FREE cancellation up to 2pm on your arrival day. No prepayment - pay at hotel</description> 
+   </hotel> 
+   <hotel> 
+       <name>The Connacht Hotel</name> 
+	   <location>Dublin Road - Galway </location>
+       <price>€75.00 per night</price> 
+       <description>Classic Double Room - Room Only - Book Now, Pay later</description> 
+   </hotel>  
+ 
+</hotel_list>
